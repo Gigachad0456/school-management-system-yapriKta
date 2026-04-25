@@ -1,12 +1,11 @@
-services:
-  # The PostgreSQL Database
-  - type: pgo
-    name: school-db
+databases:
+  - name: school-db
     databaseName: schooldb
     user: school_user
     plan: free
+    region: oregon
 
-  # The Django Backend Web Service
+services:
   - type: web
     name: school-backend
     env: python
